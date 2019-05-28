@@ -298,7 +298,7 @@ void ReduceRows(double slope, int *ImgHeight)
 	if (tempSlope*cycs < *ImgHeight) { *ImgHeight = tempSlope * cycs; }
 }
 
-double SFRCalculation(cv::Mat &ROI, double gamma)
+int SFRCalculation(cv::Mat &ROI, double gamma)
 {
 	if (ROI.empty())
 	{
@@ -362,4 +362,6 @@ double SFRCalculation(cv::Mat &ROI, double gamma)
 	}
 
 	mtf_file.close();
+	
+	return 1;
 }
